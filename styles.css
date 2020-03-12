@@ -1,71 +1,116 @@
-body{
+body {
   background-color: #f4f3f3;
 }
 
-#title{
+#title {
   text-align: center;
   font-family: Poppins;
   margin-top: 60px;
 }
 
-.start{
+.start {
   font-weight: 200;
 }
-.bold{
+
+.bold {
   font-weight: 600;
   color: hsl(234, 12%, 34%);
 }
 
-.ptitle{
+.ptitle {
   width: 40%;
   font-weight: 200;
   margin: 0 auto;
 }
 
-#cards{
-  margin: 50px auto auto;
+#cards {
+  margin: 30px auto auto;
 }
 
-.container{
+.contents {
   display: flex;
-  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 50px;
 }
 
-.space{
-  margin: 20px;
+.columns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.pcard{
+.space {
+  margin: 1px;
+  /* flex-basis: 0; */
+  flex-grow: 1;
+}
+
+.pcard {
   width: 80%;
 }
 
-.card{
-
+.card {
+  height: 290px;
+  width: 390px;
   border-top-width: thick;
   padding: 30px;
-  margin: 20px auto;
+  margin: 20px 0px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.card1{
+.card1 {
   border-top-color: red;
-  margin-top: 50%;
 }
 
-.card2{
+.card2 {
   border-top-color: green;
 }
 
-.card3{
+.card3 {
   border-top-color: yellow;
 }
 
-.card4{
+.card4 {
   border-top-color: blue;
-  margin-top: 50%;
 }
 
-.icard{
+.icard {
   width: 20%;
   margin: 10% 0 0 80%;
+}
+
+@media all and (max-width: 1300px) and (min-width: 1000px) {
+  body {
+    background: ivory;
+  }
+
+  .contents {
+    flex-direction: row;
+  }
+
+  .col1 div {
+    justify-content: flex-start;
+  }
+
+  .col3 div {
+    order: 2;
+  }
+
+  .col2 {
+    order: 3;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 999px) {
+  body {
+    background: pink;
+  }
+
+  .contents {
+    flex-direction: column;
+  }
 }
